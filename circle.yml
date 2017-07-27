@@ -8,7 +8,7 @@ environment:
 dependencies:
   override:
     - 'pip install --upgrade pip'
-    - 'pip install --upgrade cumulusci'
+    - 'pip install --upgrade cumulusci' 
 test:
   override:
    -' if [[ $CIRCLE_BRANCH == "master" ]]; then cci flow run ci_master --org dev; fi '
