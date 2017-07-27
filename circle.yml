@@ -11,4 +11,4 @@ dependencies:
     - 'pip install --upgrade cumulusci' 
 test:
   override:
-   -'cci flow run ci_master --org dev'
+   -'cci task run deploy'
