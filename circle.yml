@@ -11,4 +11,4 @@ dependencies:
     - 'pip install --upgrade cumulusci' 
 test:
   override:
-   -' if [[ $CIRCLE_BRANCH == "master" ]]; then cci flow run ci_master --org dev; fi '
+   -'cci flow run ci_master --org dev; fi '

@@ -4,9 +4,3 @@ project:
         name: dest SFDC Repo
         namespace: mydest
         api_version: 40.0
-tasks:
-    deploy:
-        description: Deploys the src directory of the repository to the org
-        class_path: cumulusci.tasks.salesforce.Deploy
-        options:
-            path: dev
