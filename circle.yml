@@ -13,4 +13,4 @@ test:
   override:
     - 'export CUMULUSCI_KEY=0a2b4c6d8e0f2g4h'
     - 'cci org default dev'
-    - 'cci task run deploy'
+    - 'cci task run deploy' 
