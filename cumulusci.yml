@@ -1,5 +1,6 @@
 project:
-    name: destSFDCRepo
+    name: dest SFDC Repo
     package:
         name: dest SFDC Repo
         namespace: mydest
+        api_version: 40.0
