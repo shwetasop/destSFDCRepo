@@ -8,7 +8,7 @@ environment:
 dependencies:
   override:
     - 'pip install --upgrade pip'
-    - 'pip install --upgrade cumulusci' 
+    - 'pip install --upgrade cumulusci'
 test:
   override:
-   -'cci task run deploy'
+    - 'cci task run deploy'
