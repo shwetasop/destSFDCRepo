@@ -14,5 +14,5 @@ dependencies:
     - 'pip install --upgrade cumulusci'
 test:
   override:
-    - 'cci org config_connected_app --client_id $client_id --client_secret $client_secret
+    - 'cci org list'
    
