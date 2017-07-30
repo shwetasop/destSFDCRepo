@@ -9,7 +9,11 @@ dependencies:
   override:
     - 'pip install --upgrade pip'
     - 'pip install --upgrade cumulusci'
-    - 'pip install --upgrade -r requirements.txt'
 test:
   override:
     - 'cci flow run ci_master --org dev'
+    - 'cci org config_connected_app'
+    - 'cci org connect dev'
+    - 'cci org default dev'
+    - 'cci task run deploy'
+
