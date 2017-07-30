@@ -14,7 +14,7 @@ dependencies:
     - 'pip install --upgrade cumulusci'
 test:
   override:
+    - 'cci org config_connected_app'
     - 'cci org connect dev'
     - 'cci org default dev'
     - 'cci task run deploy'
-
