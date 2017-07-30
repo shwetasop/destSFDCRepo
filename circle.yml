@@ -1,17 +1,18 @@
 machine:
   python:
     version: 2.7.12
+  environment:
+    client_id: <%= ENV['client_id'] %>
+    client_secret: <%= ENV['client_secret'] %>
 general:
   build_dir: src
 environment:
   CUMULUSCI_KEYCHAIN_CLASS: cumulusci.core.keychain.EnvironmentProjectKeychain
-  CLIENT_ID: <%= ENV['client_id'] %>
-  CLIENT_SECRET: <%= ENV['client_secret'] %>
 dependencies:
   override:
     - 'pip install --upgrade pip'
     - 'pip install --upgrade cumulusci'
 test:
   override:
-    - 'cci org config_connected_app --client_id $CLIENT_ID --client_secret $CLIENT_SECRET
+    - 'cci org config_connected_app --client_id $client_id --client_secret $client_secret
    
