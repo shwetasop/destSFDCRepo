@@ -1,6 +1,9 @@
 machine:
   python:
     version: 2.7.12
+  environment:
+    client_id: <%= ENV['client_id'] %>
+    client_secret: <%= ENV['client_secret'] %>
 general:
   build_dir: src
 environment:
@@ -11,8 +14,6 @@ dependencies:
     - 'pip install --upgrade cumulusci'
 test:
   override:
-    - 'cci flow run ci_master --org dev'
-    - 'cci org config_connected_app'
     - 'cci org connect dev'
     - 'cci org default dev'
     - 'cci task run deploy'
