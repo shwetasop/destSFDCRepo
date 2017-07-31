@@ -15,5 +15,5 @@ dependencies:
 test:
   post:
     - 'cci org list'
-    - 'cci org default dev'
-    - 'cci task run deploy --org dev'
+    - 'cci org default feature'
+    - 'cci task run deploy --org feature'
