@@ -8,5 +8,5 @@ dependencies:
     - 'pip install --upgrade pip'
     - 'pip install --upgrade cumulusci'
 test:
-  post:
-    - 'if [[ $CIRCLE_BRANCH == "master" ]]; then cci task run deploy --org feature -o path src'
+  pre:
+    - 'if [[ $CIRCLE_BRANCH == "master" ]]; then cci task run deploy --org feature -o path src; fi'
