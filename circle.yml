@@ -13,8 +13,7 @@ dependencies:
     - 'pip install --upgrade pip'
     - 'pip install --upgrade cumulusci'
 test:
-  override:
-    - 'echo $client_id'
-    - 'cci org config_connected_app --client_id 3MVG9uudbyLbNPZPIs_kAnoeVHKOt9vh67R5eKuWyvMfBNc1pq5rKR9mNZ3uqqzqBT6WFLUIF9icRPkXSqb3G --client_secret 393275747000309787'
+  post:
+    - 'cci org config_connected_app --client_id $client_id --client_secret $client_secret'
     - 'cci org list'
    
