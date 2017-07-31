@@ -1,11 +1,6 @@
 machine:
   python:
     version: 2.7.12
-  environment:
-    client_id: <%= ENV['client_id'] %>
-    client_secret: <%= ENV['client_secret'] %>
-general:
-  build_dir: src
 environment:
   CUMULUSCI_KEYCHAIN_CLASS: cumulusci.core.keychain.EnvironmentProjectKeychain
 dependencies:
@@ -14,7 +9,5 @@ dependencies:
     - 'pip install --upgrade cumulusci'
 test:
   post:
-    - 'pwd'
-    - 'cd ..'
     - 'pwd'
     - 'cci task run deploy --org feature -o path src'
