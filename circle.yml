@@ -16,4 +16,4 @@ test:
   post:
     - 'cci org list'
     - 'cci org default feature'
-    - 'cci task run deploy --org feature'
+    - 'cci task run deploy --org feature -o path src/'
