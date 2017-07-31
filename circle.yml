@@ -17,4 +17,4 @@ test:
     - 'cci org config_connected_app --client_id $client_id --client_secret $client_secret'
     - 'cci org list'
     - 'cci org default dev'
-    - 'cci task run deploy'
+    - 'cci task run deploy --org dev'
