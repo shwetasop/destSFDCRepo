@@ -14,4 +14,7 @@ dependencies:
     - 'pip install --upgrade cumulusci'
 test:
   post:
-    - 'cci task run deploy --org feature -o path src/test'
+    - 'pwd'
+    - 'cd ..'
+    - 'pwd'
+    - 'cci task run deploy --org feature -o path src'
