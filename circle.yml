@@ -2,7 +2,7 @@ machine:
   python:
     version: 2.7.12
   environment:
-    CUMULUSCI_ORG_feature: $(curl -X POST -d "grant_type=password" -d "client_id=3MVG9uudbyLbNPZPIs_kAnoeVHKOt9vh67R5eKuWyvMfBNc1pq5rKR9mNZ3uqqzqBT6WFLUIF9icRPkXSqb3G" -d "client_secret=393275747000309787" -d "username=soparkarshweta@gcsiweb.com" -d "password=Anuj1234qyFvl0yo7JZHlYPTYXOPdzSD" https://login.salesforce.com/services/oauth2/token)
+    CUMULUSCI_ORG_feature: $(cci org info feature)
 environment:
   CUMULUSCI_KEYCHAIN_CLASS: cumulusci.core.keychain.EnvironmentProjectKeychain
 dependencies:
