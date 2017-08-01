@@ -3,6 +3,7 @@ machine:
     version: 2.7.12
 environment:
   CUMULUSCI_KEYCHAIN_CLASS: cumulusci.core.keychain.EnvironmentProjectKeychain
+  CUMULUSCI_ORG_feature: curl -X POST -d @filename.txt https://login.salesforce.com/services/oauth2/token
 dependencies:
   override:
     - 'pip install --upgrade pip'
