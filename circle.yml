@@ -11,6 +11,7 @@ dependencies:
     - 'pip install --upgrade cumulusci'
 test:
   pre:
+    - 'echo $CUMULUSCI_ORG_feature'
     - 'if [[ $CIRCLE_BRANCH == "master" ]]; then cci task run deploy --org feature -o path src; fi'
     #- 'if [[ $CIRCLE_BRANCH == "develop" ]]; then cci task run deploy --org dev -o path src; fi'
     #- 'if [[ $CIRCLE_BRANCH == "release" ]]; then cci task run deploy --org release -o path src; fi'
