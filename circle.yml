@@ -11,7 +11,7 @@ dependencies:
     - 'pip install --upgrade cumulusci'
 test:
   post:
-    - 'curl -X POST -d @filename.txt https://login.salesforce.com/services/oauth2/token'
+    - 'CUMULUSCI_ORG_feature=$(curl -X POST -d @filename.txt https://login.salesforce.com/services/oauth2/token)'
     - 'echo $CUMULUSCI_ORG_feature'
     - 'if [[ $CIRCLE_BRANCH == "master" ]]; then cci task run deploy --org feature -o path src; fi'
     #- 'if [[ $CIRCLE_BRANCH == "develop" ]]; then cci task run deploy --org dev -o path src; fi'
