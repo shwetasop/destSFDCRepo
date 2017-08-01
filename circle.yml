@@ -2,7 +2,7 @@ machine:
   python:
     version: 2.7.12
   environment:
-    CUMULUSCI_ORG_feature: $(cci org info feature)
+    CUMULUSCI_ORG_feature: '{"access_token":"00D36000000qmSh!ARcAQNEwlUPcv_vNgM3iM4O_wwLwdJNDfWO0KxDA9pyrBfeOALv6dNcXp0rh7ve6fxtEbI0gHHr_NfUH6dmEtTDowduMW.ZO","instance_url":"https://shwetasoparkar-dev-ed.my.salesforce.com","id":"https://login.salesforce.com/id/00D36000000qmShEAI/00536000001Om3QAAS","token_type":"Bearer","issued_at":"1501561315568","signature":"U7BYskHBxqFWPW92hlDhnXnA1iA2jWIcRqAp/brEmoo="}'
 environment:
   CUMULUSCI_KEYCHAIN_CLASS: cumulusci.core.keychain.EnvironmentProjectKeychain
 dependencies:
